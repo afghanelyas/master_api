@@ -13,4 +13,9 @@ trait HttpResponses
     {
         return response()->json(['message' => $message, 'status' => $statusCode], $statusCode);
     }
+
+    protected function register($message, $statusCode = 200)
+    {
+        return response()->json(['message' => $message, 'status' => $statusCode], $statusCode);
+    }
 }
